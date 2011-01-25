@@ -12,9 +12,12 @@
   point-height:7;
 }*/
 
+@futura_med: "Futura Medium","Function Pro Medium","Ubuntu Regular","Trebuchet MS Regular","DejaVu Sans Book";
+
+/* @TODO: Sizes based on zoomlevels (waiting on mess issue #49) */
 #country-name {
   text-name:"[COUNTRY]";
-  text-face-name: "Function Pro Medium";
+  text-face-name: @futura_med;
   text-fill:#023;
   text-size:12;
   text-transform:uppercase;
@@ -28,7 +31,7 @@
 #geo-lines {
   text-dy:-7;
   text-name:"[DISPLAY]";
-  text-face-name:"Function Pro Medium";
+  text-face-name:@futura_med;
   text-fill:#268;
   text-placement:line;
   text-spacing:600;
