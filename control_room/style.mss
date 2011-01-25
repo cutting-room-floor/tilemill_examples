@@ -20,6 +20,8 @@ Layers overview
 
 Map { background-color:@base; }
 
+.water-poly { polygon-fill:@base; }
+
 #land {
   polygon-fill:#0A202A;
   polygon-gamma:0.7;
@@ -56,10 +58,10 @@ Map { background-color:@base; }
   line-width:0.5;
 }
 
-/* Waiting on multiple selectors support
+/* Waiting on mess.js issue #34 to fully work */
 #subnational_boundaries[COUNTRYNAM='US'][zoom=4],
-#subnational_boundaries[COUNTRYNAM='Canada'][zoom=4],*/
-#subnational_boundaries[zoom > 4] {
+#subnational_boundaries[COUNTRYNAM='Canada'][zoom=4],
+#subnational_boundaries[zoom>4] {
   line-color:#0AF;
   line-dasharray:4,2;
   line-opacity:0.2;
