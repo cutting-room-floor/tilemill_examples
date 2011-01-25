@@ -10,10 +10,25 @@ Layers overview
 ---------------
 
 #paper
-The shapefile is a square extending to the bounds of the map
+The shapefile is a square extending to the bounds of the map filled with
+a repeating transparent pattern to give the map a folded paper texture.
 
-Styles overview
----------------
+#country-name
+@FIXME
+
+#cities
+Point locations of many of the world's large cities. Using various \
+classification attributes in the shapefile, only certain cities will 
+be shown at certain zoom levels.
+
+#geo-lines
+Important lines such as the equator, Arctic and Antarctic circles, and 
+the international date line.
+
+#admin-0-line-land
+These are international borders that occur over land or lakes. 
+International maritime borders are a separate layer.
+
  
 ***********************************************************************/
 
