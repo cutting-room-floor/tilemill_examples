@@ -55,7 +55,7 @@ Map {
 #rivers[ScaleRank=5][zoom>6],
 #rivers[ScaleRank=6][zoom>7] {
   line-color:@line * 1.5;
-  line-width:1;
+  line-width:0.6;
 }
 
 /* ---- Imaginary lines ---- */
