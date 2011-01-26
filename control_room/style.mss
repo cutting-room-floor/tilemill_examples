@@ -52,7 +52,8 @@ Map { background-color:@base; }
   line-opacity:0.05;
 }
 
-#international_boundaries {
+/* @TODO: thickness by zoomlevel */
+#international_boundaries[zoom>1] {
   line-color:#0AF;
   line-dasharray:1,1;
   line-width:0.5;
