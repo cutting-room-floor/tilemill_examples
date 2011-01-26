@@ -1,35 +1,52 @@
-/* Waiting on mess.js issue #62
-#city[ADM0CAP=1][zoom>6] {
-  text-name: "[NAME]";
-  text-fill: #000;
-  text-face-name:"Function Pro Medium";
-  text-size: 11;
-  text-dy: -4;
-  text-halo-fill: rgba(255,255,255,0.5);
-  text-halo-radius: 1;
-  point-file: url(../local_data/icon/circle-7.png);
-  point-width:7;
-  point-height:7;
-}*/
+/* @TODO: Text-size increases based on zoomlevels.
+   Waiting on mess.js issue #49. */
 
+/* Fonts and font sets can be assigned to variables. The first font
+   will be preferred, and fall back to subsequent fonts for characters
+   that are not available, or if the entire font is not available to
+   Mapnik. */
 @futura_med: "Futura Medium","Function Pro Medium","Ubuntu Regular","Trebuchet MS Regular","DejaVu Sans Book";
 
-/* @TODO: Sizes based on zoomlevels (waiting on mess issue #49) */
+@futura_bold: "Futura Bold","Function Pro Bold","Ubuntu Bold","Trebuchet MS Bold","DejaVu Sans Bold";
+
+/* @TODO: Short forms, hide smaller countries at lower zoom levels */
 #country-name {
   text-name:"[COUNTRY]";
   text-face-name: @futura_med;
-  text-fill:#023;
-  text-size:12;
+  text-fill:@line * 0.6;
+  text-size:10;
   text-transform:uppercase;
-  text-halo-fill:rgba(255,255,255,0.4);
+  text-halo-fill:rgba(255,255,255,0.5);
   text-halo-radius:1;
   text-character-spacing:1;
   text-line-spacing:1;
   text-wrap-width:100;
 }
 
+#cities[WORLDCITY=1][zoom>4] {
+  text-name: "[NAME]";
+  text-fill: @line * 0.3;
+  text-face-name:@futura_med;
+  text-size: 11;
+  text-dy: -4;
+  text-halo-fill: rgba(255,255,255,0.5);
+  text-halo-radius: 1;
+  point-file: url(../images/icons-maki/circle-7.png);
+}
+
+#cities[ADM0CAP=1][zoom>3] {
+  text-name: "[NAME]";
+  text-fill: @line * 0.3;
+  text-face-name:@futura_med;
+  text-size: 11;
+  text-dy: -5;
+  text-halo-fill: rgba(255,255,255,0.5);
+  text-halo-radius: 1;
+  point-file: url(../images/icons-maki/star-10.png);
+}
+
 #geo-lines {
-  text-dy:-7;
+  text-dy:6;
   text-name:"[DISPLAY]";
   text-face-name:@futura_med;
   text-fill:#268;
