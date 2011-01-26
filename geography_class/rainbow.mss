@@ -12,15 +12,15 @@ for i in range(251):
 
 ***********************************************************************/
 
-@white: #fff;
-@red: #f97;
-@orange: #fb7;
-@yellow: #fe8;
-@green: #bd8;
-@turquoise: #9ec;
-@blue: #8bf;
-@pink: #fbc;
-@purple: #cac;
+@white: #F0F8FF;
+@red: #fdaf6b;
+@orange: #fdc663;
+@yellow: #fae364;
+@green: #d3e46f;
+@turquoise: #aadb78;
+@blue: #a3cec5;
+@purple: #ceb5cf;
+@pink: #f3c1d3;
 
 #country[OBJECTID=1] { polygon-fill:@red; }
 #country[OBJECTID=2] { polygon-fill:@orange; }
@@ -31,7 +31,7 @@ for i in range(251):
 #country[OBJECTID=7] { polygon-fill:@purple; }
 #country[OBJECTID=8] { polygon-fill:@yellow; }
 #country[OBJECTID=9] { polygon-fill:@red; }
-#country[OBJECTID=10] { polygon-fill:@orange; }
+#country[OBJECTID=10] { polygon-fill:@white; }
 #country[OBJECTID=11] { polygon-fill:@yellow; }
 #country[OBJECTID=12] { polygon-fill:@green; }
 #country[OBJECTID=13] { polygon-fill:@turquoise; }
@@ -43,7 +43,7 @@ for i in range(251):
 #country[OBJECTID=19] { polygon-fill:@yellow; }
 #country[OBJECTID=20] { polygon-fill:@green; }
 #country[OBJECTID=21] { polygon-fill:@turquoise; }
-#country[OBJECTID=22] { polygon-fill:@blue; }
+#country[OBJECTID=22] { polygon-fill:@orange; }
 #country[OBJECTID=23] { polygon-fill:@purple; }
 #country[OBJECTID=24] { polygon-fill:@pink; }
 #country[OBJECTID=25] { polygon-fill:@red; }
@@ -51,7 +51,7 @@ for i in range(251):
 #country[OBJECTID=27] { polygon-fill:@yellow; }
 #country[OBJECTID=28] { polygon-fill:@red; }
 #country[OBJECTID=29] { polygon-fill:@turquoise; }
-#country[OBJECTID=30] { polygon-fill:@blue; }
+#country[OBJECTID=30] { polygon-fill:@pink; }
 #country[OBJECTID=31] { polygon-fill:@purple; }
 #country[OBJECTID=32] { polygon-fill:@blue; }
 #country[OBJECTID=33] { polygon-fill:@red; }
@@ -66,7 +66,7 @@ for i in range(251):
 #country[OBJECTID=42] { polygon-fill:@yellow; }
 #country[OBJECTID=43] { polygon-fill:@yellow; }
 #country[OBJECTID=44] { polygon-fill:@orange; }
-#country[OBJECTID=45] { polygon-fill:@turquoise; }
+#country[OBJECTID=45] { polygon-fill:@yellow; }
 #country[OBJECTID=46] { polygon-fill:@blue; }
 #country[OBJECTID=47] { polygon-fill:@purple; }
 #country[OBJECTID=48] { polygon-fill:@blue; }
@@ -112,7 +112,7 @@ for i in range(251):
 #country[OBJECTID=88] { polygon-fill:@pink; }
 #country[OBJECTID=89] { polygon-fill:@red; }
 #country[OBJECTID=90] { polygon-fill:@orange; }
-#country[OBJECTID=91] { polygon-fill:@yellow; }
+#country[OBJECTID=91] { polygon-fill:@green; }
 #country[OBJECTID=92] { polygon-fill:@green; }
 #country[OBJECTID=93] { polygon-fill:@turquoise; }
 #country[OBJECTID=94] { polygon-fill:@red; }
@@ -147,7 +147,7 @@ for i in range(251):
 #country[OBJECTID=123] { polygon-fill:@pink; }
 #country[OBJECTID=124] { polygon-fill:@green; }
 #country[OBJECTID=125] { polygon-fill:@purple; }
-#country[OBJECTID=126] { polygon-fill:@blue; }
+#country[OBJECTID=126] { polygon-fill:@turquoise; }
 #country[OBJECTID=127] { polygon-fill:@purple; }
 #country[OBJECTID=128] { polygon-fill:@pink; }
 #country[OBJECTID=129] { polygon-fill:@orange; }
@@ -162,7 +162,7 @@ for i in range(251):
 #country[OBJECTID=138] { polygon-fill:@orange; }
 #country[OBJECTID=139] { polygon-fill:@yellow; }
 #country[OBJECTID=140] { polygon-fill:@red; }
-#country[OBJECTID=141] { polygon-fill:@turquoise; }
+#country[OBJECTID=141] { polygon-fill:@purple; }
 #country[OBJECTID=142] { polygon-fill:@blue; }
 #country[OBJECTID=143] { polygon-fill:@purple; }
 #country[OBJECTID=144] { polygon-fill:@pink; }
@@ -191,7 +191,7 @@ for i in range(251):
 #country[OBJECTID=167] { polygon-fill:@purple; }
 #country[OBJECTID=168] { polygon-fill:@pink; }
 #country[OBJECTID=169] { polygon-fill:@red; }
-#country[OBJECTID=170] { polygon-fill:@orange; }
+#country[OBJECTID=170] { polygon-fill:@purple; }
 #country[OBJECTID=171] { polygon-fill:@yellow; }
 #country[OBJECTID=172] { polygon-fill:@green; }
 #country[OBJECTID=173] { polygon-fill:@orange; }
@@ -240,7 +240,7 @@ for i in range(251):
 #country[OBJECTID=216] { polygon-fill:@blue; }
 #country[OBJECTID=217] { polygon-fill:@red; }
 #country[OBJECTID=218] { polygon-fill:@yellow; }
-#country[OBJECTID=219] { polygon-fill:@yellow; }
+#country[OBJECTID=219] { polygon-fill:@pink; }
 #country[OBJECTID=220] { polygon-fill:@green; }
 #country[OBJECTID=221] { polygon-fill:@turquoise; }
 #country[OBJECTID=222] { polygon-fill:@blue; }
