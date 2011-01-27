@@ -57,14 +57,14 @@
   text-dy: -5;
   text-halo-fill: rgba(255,255,255,0.5);
   text-halo-radius: 1;
-  point-file: url(../images/icons-maki/star-10.png);
+  point-file: url(../resources/icons/star-10.png);
 }
 
 #geo-lines[zoom>1] {
   text-dy:-7;
   text-name:"[DISPLAY]";
   text-face-name:@futura_med;
-  text-fill:#268;
+  text-fill:@line;
   text-placement:line;
   text-spacing:600;
 }

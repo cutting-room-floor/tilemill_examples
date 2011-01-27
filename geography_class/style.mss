@@ -159,6 +159,9 @@ Map {
 }
 
 /* Transparent PNG overlay for paper texture */
-#paper { 
-  polygon-pattern-file:url(http://tilemill-data.s3.amazonaws.com/images/paperfolds_512.png);
+#paper[zoom<2] { 
+  polygon-pattern-file:url(../resources/textures/paperfolds_256.png);
+}
+#paper[zoom>1] { 
+  polygon-pattern-file:url(../resources/textures/paperfolds_512.png);
 }
