@@ -41,11 +41,25 @@ Map {
   background-color: @water; 
 }
 
-#lakes[Name1!=''][zoom>2] {
+#lakes[Name1!=''][zoom>2],
+#lakes[Name1=''][zoom>4] {
   polygon-fill:@water;
   line-color:@line * 1.5;
-  line-width:1;
+  line-width:0.4;
+  line-opacity:0.4;
 }
+#lakes[Name1!=''][zoom=4] {
+  line-width:0.6;
+  line-opacity:0.6;
+}
+#lakes[zoom=5] {
+  line-width:2;
+  line-opacity:0.8;
+}
+/*#lakes[zoom>5] {
+  line-width:1.8;
+  line-opacity:1;
+}*/
 
 #rivers[ScaleRank=1][zoom>=3],
 #rivers[ScaleRank=2][zoom>=4],
@@ -57,6 +71,7 @@ Map {
 #rivers[ScaleRank=8][zoom>=7],
 #rivers[ScaleRank=9][zoom>=8] {
   line-color:@line * 1.5;
+  line-join:round;
 }
 #rivers[ScaleRank=1][zoom=3],
 #rivers[ScaleRank=2][zoom=4],
@@ -67,7 +82,8 @@ Map {
 #rivers[ScaleRank=7][zoom=7],
 #rivers[ScaleRank=8][zoom=7],
 #rivers[ScaleRank=9][zoom=8] {
-  line-width:0.3;
+  line-width:0.2;
+  line-opacity:0.4;
 }
 #rivers[ScaleRank=1][zoom=4],
 #rivers[ScaleRank=2][zoom=5],
@@ -78,7 +94,8 @@ Map {
 #rivers[ScaleRank=7][zoom=8],
 #rivers[ScaleRank=8][zoom=8],
 #rivers[ScaleRank=9][zoom=9] {
-  line-width:0.6;
+  line-width:0.4;
+  line-opacity:0.6;
 }
 #rivers[ScaleRank=1][zoom=5],
 #rivers[ScaleRank=2][zoom=6],
@@ -89,7 +106,8 @@ Map {
 #rivers[ScaleRank=7][zoom=9],
 #rivers[ScaleRank=8][zoom=9],
 #rivers[ScaleRank=9][zoom=10] {
-  line-width:0.9;
+  line-width:0.6;
+  line-opacity:0.8;
 }
 #rivers[ScaleRank=1][zoom=6],
 #rivers[ScaleRank=2][zoom=7],
@@ -100,7 +118,8 @@ Map {
 #rivers[ScaleRank=7][zoom=10],
 #rivers[ScaleRank=8][zoom=10],
 #rivers[ScaleRank=9][zoom=11] {
-  line-width:1.2;
+  line-width:0.8;
+  line-opacity:1;
 }
 
 /* Useful/significant lines */
