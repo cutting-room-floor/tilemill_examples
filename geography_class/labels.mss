@@ -19,23 +19,23 @@
   text-halo-fill:rgba(255,255,255,0.5);
   text-halo-radius:1;
   text-line-spacing:1;
-  text-wrap-width:60;
+  text-wrap-width:50;
 }
 /* Waiting on TileMill issue #152
 #country-name[zoom=4] {
   text-size:10;
   text-character-spacing:1;
-  text-wrap-width:80;
+  text-wrap-width:75;
 }
 #country-name[zoom=5] {
   text-size:11;
   text-character-spacing:2;
-  text-wrap-width:120;
+  text-wrap-width:100;
 }
 #country-name[zoom=6] {
   text-size:12;
   text-character-spacing:4;
-  text-wrap-width:200;
+  text-wrap-width:150;
 } */
 
 #cities[WORLDCITY=1][zoom>4] {
@@ -60,7 +60,7 @@
   point-file: url(../images/icons-maki/star-10.png);
 }
 
-#geo-lines {
+#geo-lines[zoom>1] {
   text-dy:-7;
   text-name:"[DISPLAY]";
   text-face-name:@futura_med;

@@ -126,8 +126,12 @@ Map {
 #geo-lines {
   line-color:@line;
   line-dasharray:6,2;
-  line-width:1.0;
 }
+#geo-lines[zoom=0] { line-width:0.2; }
+#geo-lines[zoom=1] { line-width:0.4; }
+#geo-lines[zoom=2] { line-width:0.6; }
+#geo-lines[zoom=3] { line-width:0.8; }
+#geo-lines[zoom>3] { line-width:1; }
 
 #admin-0-line-land[zoom>1] {
   line-width:1;
@@ -138,11 +142,16 @@ Map {
 /* Coastlines */
 #land-glow::inner { 
   line-color:@line;
-  line-width:2.5;
+
   line-opacity:0.8;
   line-join:round;
 }
-#land-glow::outer { 
+#land-glow::inner[zoom=0] { line-width:1.2; }
+#land-glow::inner[zoom=1] { line-width:1.6; }
+#land-glow::inner[zoom=2] { line-width:2; }
+#land-glow::inner[zoom>2] { line-width:2.4; }
+
+#land-glow::outer[zoom>1] { 
   line-color:@line;
   line-width:5;
   line-opacity:0.1;
