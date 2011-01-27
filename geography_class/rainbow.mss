@@ -1,8 +1,8 @@
 /***********************************************************************
 
 This file is responsible for assigning colors to each country. An 
-initial set of colors was created with the following python code, then 
-heavily tweaked for better visual distribution:
+initial set of color assignments was created with the following python 
+code, then heavily tweaked by hand for better visual distribution:
 
 #!/usr/bin/env python
 colors = ["red","orange","yellow","green","turquoise","blue","purple","pink"]
@@ -32,7 +32,7 @@ for i in range(251):
 #country[OBJECTID=8] { polygon-fill:@yellow; }
 #country[OBJECTID=9] { polygon-fill:@red; }
 #country[OBJECTID=10] { polygon-fill:@white; }
-#country[OBJECTID=11] { polygon-fill:@yellow; }
+#country[OBJECTID=11] { polygon-fill:@turquoise; }
 #country[OBJECTID=12] { polygon-fill:@green; }
 #country[OBJECTID=13] { polygon-fill:@turquoise; }
 #country[OBJECTID=14] { polygon-fill:@blue; }
@@ -44,7 +44,7 @@ for i in range(251):
 #country[OBJECTID=20] { polygon-fill:@green; }
 #country[OBJECTID=21] { polygon-fill:@turquoise; }
 #country[OBJECTID=22] { polygon-fill:@orange; }
-#country[OBJECTID=23] { polygon-fill:@purple; }
+#country[OBJECTID=23] { polygon-fill:@turquoise; }
 #country[OBJECTID=24] { polygon-fill:@pink; }
 #country[OBJECTID=25] { polygon-fill:@red; }
 #country[OBJECTID=26] { polygon-fill:@turquoise; }
@@ -66,7 +66,7 @@ for i in range(251):
 #country[OBJECTID=42] { polygon-fill:@yellow; }
 #country[OBJECTID=43] { polygon-fill:@yellow; }
 #country[OBJECTID=44] { polygon-fill:@orange; }
-#country[OBJECTID=45] { polygon-fill:@yellow; }
+#country[OBJECTID=45] { polygon-fill:@pink; }
 #country[OBJECTID=46] { polygon-fill:@blue; }
 #country[OBJECTID=47] { polygon-fill:@purple; }
 #country[OBJECTID=48] { polygon-fill:@blue; }
@@ -90,7 +90,7 @@ for i in range(251):
 #country[OBJECTID=66] { polygon-fill:@orange; }
 #country[OBJECTID=67] { polygon-fill:@orange; }
 #country[OBJECTID=68] { polygon-fill:@green; }
-#country[OBJECTID=69] { polygon-fill:@turquoise; }
+#country[OBJECTID=69] { polygon-fill:@red; }
 #country[OBJECTID=70] { polygon-fill:@blue; }
 #country[OBJECTID=71] { polygon-fill:@purple; }
 #country[OBJECTID=72] { polygon-fill:@pink; }
@@ -120,7 +120,7 @@ for i in range(251):
 #country[OBJECTID=96] { polygon-fill:@pink; }
 #country[OBJECTID=97] { polygon-fill:@red; }
 #country[OBJECTID=98] { polygon-fill:@orange; }
-#country[OBJECTID=99] { polygon-fill:@yellow; }
+#country[OBJECTID=99] { polygon-fill:@pink; }
 #country[OBJECTID=100] { polygon-fill:@green; }
 #country[OBJECTID=101] { polygon-fill:@turquoise; }
 #country[OBJECTID=102] { polygon-fill:@blue; }
@@ -174,7 +174,7 @@ for i in range(251):
 #country[OBJECTID=150] { polygon-fill:@blue; }
 #country[OBJECTID=151] { polygon-fill:@orange; }
 #country[OBJECTID=152] { polygon-fill:@pink; }
-#country[OBJECTID=153] { polygon-fill:@red; }
+#country[OBJECTID=153] { polygon-fill:@purple; }
 #country[OBJECTID=154] { polygon-fill:@blue; }
 #country[OBJECTID=155] { polygon-fill:@pink; }
 #country[OBJECTID=156] { polygon-fill:@green; }
@@ -202,14 +202,14 @@ for i in range(251):
 #country[OBJECTID=178] { polygon-fill:@orange; }
 #country[OBJECTID=179] { polygon-fill:@yellow; }
 #country[OBJECTID=180] { polygon-fill:@green; }
-#country[OBJECTID=181] { polygon-fill:@turquoise; }
+#country[OBJECTID=181] { polygon-fill:@yellow; }
 #country[OBJECTID=182] { polygon-fill:@blue; }
 #country[OBJECTID=183] { polygon-fill:@purple; }
 #country[OBJECTID=184] { polygon-fill:@green; }
 #country[OBJECTID=185] { polygon-fill:@red; }
 #country[OBJECTID=186] { polygon-fill:@orange; }
 #country[OBJECTID=187] { polygon-fill:@yellow; }
-#country[OBJECTID=188] { polygon-fill:@green; }
+#country[OBJECTID=188] { polygon-fill:@yellow; }
 #country[OBJECTID=189] { polygon-fill:@turquoise; }
 #country[OBJECTID=190] { polygon-fill:@blue; }
 #country[OBJECTID=191] { polygon-fill:@purple; }
@@ -231,7 +231,7 @@ for i in range(251):
 #country[OBJECTID=207] { polygon-fill:@purple; }
 #country[OBJECTID=208] { polygon-fill:@yellow; }
 #country[OBJECTID=209] { polygon-fill:@red; }
-#country[OBJECTID=210] { polygon-fill:@orange; }
+#country[OBJECTID=210] { polygon-fill:@blue; }
 #country[OBJECTID=211] { polygon-fill:@yellow; }
 #country[OBJECTID=212] { polygon-fill:@green; }
 #country[OBJECTID=213] { polygon-fill:@turquoise; }
@@ -261,7 +261,7 @@ for i in range(251):
 #country[OBJECTID=237] { polygon-fill:@green; }
 #country[OBJECTID=238] { polygon-fill:@blue; }
 #country[OBJECTID=239] { polygon-fill:@purple; }
-#country[OBJECTID=240] { polygon-fill:@pink; }
+#country[OBJECTID=240] { polygon-fill:@yellow; }
 #country[OBJECTID=241] { polygon-fill:@red; }
 #country[OBJECTID=242] { polygon-fill:@orange; }
 #country[OBJECTID=243] { polygon-fill:@yellow; }
