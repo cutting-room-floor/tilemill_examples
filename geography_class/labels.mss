@@ -10,18 +10,33 @@
 @futura_bold: "Futura Bold","Function Pro Bold","Ubuntu Bold","Trebuchet MS Bold","DejaVu Sans Bold";
 
 /* @TODO: Short forms, hide smaller countries at lower zoom levels */
-#country-name {
+#country-name[zoom>2] {
   text-name:"[COUNTRY]";
   text-face-name: @futura_med;
   text-fill:@line * 0.6;
-  text-size:10;
+  text-size:9;
   text-transform:uppercase;
   text-halo-fill:rgba(255,255,255,0.5);
   text-halo-radius:1;
-  text-character-spacing:1;
   text-line-spacing:1;
-  text-wrap-width:100;
+  text-wrap-width:60;
 }
+/* Waiting on TileMill issue #152
+#country-name[zoom=4] {
+  text-size:10;
+  text-character-spacing:1;
+  text-wrap-width:80;
+}
+#country-name[zoom=5] {
+  text-size:11;
+  text-character-spacing:2;
+  text-wrap-width:120;
+}
+#country-name[zoom=6] {
+  text-size:12;
+  text-character-spacing:4;
+  text-wrap-width:200;
+} */
 
 #cities[WORLDCITY=1][zoom>4] {
   text-name: "[NAME]";
@@ -46,7 +61,7 @@
 }
 
 #geo-lines {
-  text-dy:6;
+  text-dy:-7;
   text-name:"[DISPLAY]";
   text-face-name:@futura_med;
   text-fill:#268;
