@@ -3,9 +3,6 @@
 'Control Room'
 ==============
 
-Copyright 2011 Development Seed
-See LICENSE for details on permissions for copying and reuse.
-
 Layers overview
 ---------------
 
@@ -13,7 +10,6 @@ Layers overview
 #land - actually country borders but used as land
 #land-glow - series of outlines behind the land to fake a soft glow
 
- 
 ***********************************************************************/
 
 @base: #001420;
