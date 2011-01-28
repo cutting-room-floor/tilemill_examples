@@ -3,9 +3,8 @@
 'Road Trip'
 ===========
 
-Inspired by 
+Inspired by the impossible-to-fold maps in your glovebox.
 
- 
 ***********************************************************************/
 
 @land: #FFF6E0;
@@ -30,11 +29,6 @@ Map {
 
 #lake::outline { line-color:@waterline; }
 #lake::fill { polygon-fill:@water; }
-
-#f {
-  polygon-fill:#fff;
-  polygon-opacity:0.5;
-}
 
 .park { line-color:#AD9; }
 .park.area { polygon-fill:#DEB; }
