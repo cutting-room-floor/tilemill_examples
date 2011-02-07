@@ -1,6 +1,7 @@
 @serif:"Times New Roman Regular","FreeSerif Medium","DejaVu Serif Book";
 @serif_italic:"Times New Roman Italic","FreeSerif Italic","DejaVu Serif Italic";
 @sans:"Arial Regular","Liberation Sans Regular","DejaVu Sans Book";
+@sans-bold:"Arial Bold","Liberation Sans Bold","DejaVu Sans Bold";
 
 #country_label[zoom>1][zoom<6][COUNTRY='Canada'],
 #country_label[zoom>1][zoom<6][COUNTRY='United States of America'],
@@ -19,7 +20,7 @@
 
 #city::caps[ADM0CAP=1] {
   text-name:"[NAME]";
-  text-face-name:"Arial Bold";
+  text-face-name:@sans;
   text-size:12;
   text-halo-radius:2;
   text-halo-fill:rgba(255,255,255,0.75);
@@ -27,7 +28,7 @@
 
 #city::world[WORLDCITY=1][ADM0CAP!=1] {
   text-name:"[NAME]";
-  text-face-name:"Arial Bold";
+  text-face-name:@sans;
   text-size:11;
   text-halo-radius:2;
   text-halo-fill:rgba(255,255,255,0.75);
@@ -35,7 +36,7 @@
 
 #city[CAPALT=0][zoom>3] {
   text-name:"[NAME]";
-  text-face-name:"Arial Regular";
+  text-face-name:@sans-bold;
   text-size:9;
   text-halo-radius:1;
   text-halo-fill:rgba(255,255,255,0.75);
