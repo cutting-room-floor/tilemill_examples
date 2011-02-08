@@ -144,17 +144,28 @@ Map {
   line-join:round;
 }
 
+#state[ADM0_A3="USA"],
+#state[ADM0_A3="CAN"],
+#state[ADM0_A3="AUS"],
+#state[ADM0_A3="RUS"] {
+  [zoom>3] {
+    line-color:@line;
+    line-opacity:0.25;
+    line-width:1.2;
+    line-dasharray:6,2,2,2;
+  }
+}
+
 /* Coastlines */
 #land-glow::inner { 
   line-color:@line;
-
   line-opacity:0.8;
   line-join:round;
+  [zoom=0] { line-width:1.2; }
+  [zoom=1] { line-width:1.6; }
+  [zoom=2] { line-width:2; }
+  [zoom>2] { line-width:2.4; }
 }
-#land-glow::inner[zoom=0] { line-width:1.2; }
-#land-glow::inner[zoom=1] { line-width:1.6; }
-#land-glow::inner[zoom=2] { line-width:2; }
-#land-glow::inner[zoom>2] { line-width:2.4; }
 
 #land-glow::outer[zoom>1] { 
   line-color:@line;
