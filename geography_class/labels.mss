@@ -9,7 +9,19 @@
 
 @futura_bold: "Futura Bold","Function Pro Bold","Ubuntu Bold","Trebuchet MS Bold","DejaVu Sans Bold";
 
-/* @TODO: Short forms, hide smaller countries at lower zoom levels */
+/* ---- Countries ---- */
+/* @TODO: Short forms in crowded areas */
+#country-name[zoom=2][SHAPE_AREA>20] {
+  text-name:"[COUNTRY]";
+  text-face-name: @futura_med;
+  text-fill:@line * 0.6;
+  text-size:9;
+  text-transform:uppercase;
+  text-halo-fill:rgba(255,255,255,0.5);
+  text-halo-radius:1;
+  text-line-spacing:1;
+  text-wrap-width:30;
+}
 #country-name[zoom>2] {
   text-name:"[COUNTRY]";
   text-face-name: @futura_med;
@@ -21,22 +33,23 @@
   text-line-spacing:1;
   text-wrap-width:50;
 }
-/* Waiting on TileMill issue #152
 #country-name[zoom=4] {
   text-size:10;
   text-character-spacing:1;
-  text-wrap-width:75;
+  text-wrap-width:60;
 }
 #country-name[zoom=5] {
-  text-size:11;
+  text-size:13;
   text-character-spacing:2;
-  text-wrap-width:100;
+  text-line-spacing:3;
+  text-wrap-width:70;
 }
 #country-name[zoom=6] {
-  text-size:12;
+  text-size:16;
   text-character-spacing:4;
-  text-wrap-width:150;
-} */
+  text-line-spacing:4;
+  text-wrap-width:80;
+}
 
 #cities[WORLDCITY=1][zoom>4] {
   text-name: "[NAME]";
@@ -46,7 +59,7 @@
   text-dy: -4;
   text-halo-fill: rgba(255,255,255,0.5);
   text-halo-radius: 1;
-  point-file: url(../images/icons-maki/circle-7.png);
+  point-file: url(../resources/icons/circle-7.png);
 }
 
 #cities[ADM0CAP=1][zoom>3] {
