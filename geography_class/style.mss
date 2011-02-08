@@ -122,6 +122,11 @@ Map {
   line-opacity:1;
 }
 
+#glacier { 
+  polygon-fill:#fff;
+  polygon-opacity:0.5;
+}
+
 /* Useful/significant lines */
 #geo-lines {
   line-color:@line;
