@@ -1,7 +1,7 @@
 # TileMill Examples
 
-Map styles for use with [TileMill][1]. Requires [mess.js][2] to compile into [Mapnik][3] XML styles.
+Map styles for use with [TileMill][1]. Requires [carto][2] to compile into [Mapnik][3] XML styles.
 
 [1]: http://github.com/developmentseed/TileMill
-[2]: http://github.com/developmentseed/mess.js
+[2]: http://github.com/mapbox/carto
 [3]: http://mapnik.org/
