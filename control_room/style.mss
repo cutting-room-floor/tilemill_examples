@@ -1,16 +1,6 @@
-/***********************************************************************
-
-'Control Room'
-==============
-
-Layers overview
----------------
-
-#urban - urban areas
-#land - actually country borders but used as land
-#land-glow - series of outlines behind the land to fake a soft glow
-
-***********************************************************************/
+/**********************************************************
+ * Control Room
+ **********************************************************/
 
 @base: #001420;
 
@@ -48,16 +38,19 @@ Map { background-color:@base; }
   line-opacity:0.05;
 }
 
-/* @TODO: thickness by zoomlevel */
 #international_boundaries[zoom>1] {
   line-color:#0AF;
   line-dasharray:1,1;
   line-width:0.5;
+  [zoom=4] { line-width:0.6; }
+  [zoom=5] { line-width:0.8; }
+  [zoom=6] { line-width:1; }
+  [zoom>6] { line-width:1.2; }
 }
 
-/* Waiting on mess.js issue #34 to fully work */
 #subnational_boundaries[COUNTRYNAM='US'][zoom=4],
 #subnational_boundaries[COUNTRYNAM='Canada'][zoom=4],
+#subnational_boundaries[COUNTRYNAM='Australia'][zoom=4],
 #subnational_boundaries[zoom>4] {
   line-color:#0AF;
   line-dasharray:4,2;
@@ -69,7 +62,8 @@ Map { background-color:@base; }
   line-color:#B2A;
   line-dasharray:1,4;
   line-opacity:0.8;
-  line-width:1.25;
+  line-width:0.25;
+  line-gamma:0.2;
 }
 
 #urban {
