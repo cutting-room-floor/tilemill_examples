@@ -1,6 +1,3 @@
-/* @TODO: Text-size increases based on zoomlevels.
-   Waiting on mess.js issue #49. */
-
 /* Fonts and font sets can be assigned to variables. The first font
    will be preferred, and fall back to subsequent fonts for characters
    that are not available, or if the entire font is not available to
