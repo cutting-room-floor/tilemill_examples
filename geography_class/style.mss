@@ -1,4 +1,4 @@
-/***********************************************************************
+/**********************************************************
 
 'Geography Class'
 =================
@@ -7,27 +7,30 @@ Layers overview
 ---------------
 
 #paper [world-extent.zip]
-The shapefile is a square extending to the bounds of the map filled with
-a repeating transparent pattern to give the map a folded paper texture.
+The shapefile is a square extending to the bounds of the 
+map filled with a repeating transparent pattern to give the 
+map a folded paper texture.
+
+#cities
 
 #country-name [admin-0-point.zip]
 Labeled points of the world's country names.
 
 #cities [populated-places.zip]
-Point locations of many of the world's large cities. Using various \
-classification attributes in the shapefile, only certain cities will 
-be shown at certain zoom levels.
+Point locations of many of the world's large cities. Using 
+various classification attributes in the shapefile, only 
+certain cities will be shown at certain zoom levels.
 
 #geo-lines [geographic-lines.zip]
-Important lines such as the equator, Arctic and Antarctic circles, and 
-the international date line.
+Important lines such as the equator, Arctic and Antarctic 
+circles, and the international date line.
 
 #admin-0-line-land [admin-0-line-land.zip]
-These are international borders that occur over land or lakes. 
-International maritime borders are a separate layer.
+These are international borders that occur over land or 
+lakes. International maritime borders are a separate layer.
 
 #lakes [lakes.zip]
-The worlds lakes.
+The world's lakes.
 
  
 ***********************************************************************/
@@ -128,15 +131,15 @@ Map {
 }
 
 /* Useful/significant lines */
-#geo-lines {
+#geo-lines[DISPLAY!='International Date Line - Pre 1995 alignment'] {
   line-color:@line;
   line-dasharray:6,2;
+  [zoom=0] { line-width:0.2; }
+  [zoom=1] { line-width:0.4; }
+  [zoom=2] { line-width:0.6; }
+  [zoom=3] { line-width:0.8; }
+  [zoom>3] { line-width:1; }
 }
-#geo-lines[zoom=0] { line-width:0.2; }
-#geo-lines[zoom=1] { line-width:0.4; }
-#geo-lines[zoom=2] { line-width:0.6; }
-#geo-lines[zoom=3] { line-width:0.8; }
-#geo-lines[zoom>3] { line-width:1; }
 
 #admin-0-line-land[zoom>1] {
   line-width:1;
