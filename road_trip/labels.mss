@@ -3,38 +3,25 @@
 @sans:"Arial Regular","Liberation Sans Regular","DejaVu Sans Book";
 @sans-bold:"Arial Bold","Liberation Sans Bold","DejaVu Sans Bold";
 
-#country_label[zoom>1][zoom<6][COUNTRY='Canada'],
-#country_label[zoom>1][zoom<6][COUNTRY='United States of America'],
-#country_label[zoom>1][zoom<6][COUNTRY='Mexico'] {
+#country_label[zoom>2][zoom<6][COUNTRY='Canada'],
+#country_label[zoom>2][zoom<6][COUNTRY='United States of America'],
+#country_label[zoom>2][zoom<6][COUNTRY='Mexico'] {
   text-name:"[COUNTRY]";
   text-face-name:@serif;
   text-transform:uppercase;
-  text-character-spacing:2;
+  text-character-spacing:1;
   text-line-spacing:4;
   text-size:14;
-  text-wrap-width:140;
+  text-wrap-width:120;
   text-allow-overlap:true;
   text-halo-radius:2;
   text-halo-fill:rgba(255,255,255,0.75);
 }
 
-#city::caps[ADM0CAP=1] {
-  text-name:"[NAME]";
-  text-face-name:@sans;
-  text-size:12;
-  text-halo-radius:2;
-  text-halo-fill:rgba(255,255,255,0.75);
-}
-
-#city::world[WORLDCITY=1][ADM0CAP!=1] {
-  text-name:"[NAME]";
-  text-face-name:@sans;
-  text-size:11;
-  text-halo-radius:2;
-  text-halo-fill:rgba(255,255,255,0.75);
-}
-
-#city[CAPALT=0][zoom>3] {
+#city[SOV_A3='USA'][SCALERANK<4][zoom>2],
+#city[SOV_A3='USA'][SCALERANK=4][zoom>3],
+#city[SOV_A3='USA'][SCALERANK=5][zoom>4],
+#city[SOV_A3='USA'][SCALERANK>=6][zoom>5] {
   text-name:"[NAME]";
   text-face-name:@sans-bold;
   text-size:9;
@@ -46,7 +33,7 @@
   text-name:"[Unit_Name]";
   text-face-name:@serif_italic;
   text-fill:#063;
-  text-size:12;
+  text-size:11;
   text-halo-radius:1;
   text-halo-fill:rgba(255,255,255,0.75);
   text-wrap-width:30;
