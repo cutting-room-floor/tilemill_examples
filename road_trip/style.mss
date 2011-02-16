@@ -23,7 +23,7 @@ Map {
   polygon-fill:@land;
   polygon-gamma:0.75;
 }
-#countries::fill[OBJECTID=240] {
+#countries::fill[SOV_A3='USA'] {
   polygon-fill:@land*1.1;
 }
 
@@ -52,12 +52,18 @@ Map {
   line-width:0.8;
 }
 
-#state_line::glow[zoom>2] {
-  line-color:#FD0;
-  line-opacity:0.2;
-  line-width:3;
+#state_line::glow[ADM0_A3='USA'],
+#state_line::glow[ADM0_A3='CAN'] {
+  [zoom>2] {
+    line-color:#FD0;
+    line-opacity:0.2;
+    line-width:3;
+  }
 }
-#state_line[zoom>2] {
-  line-dasharray:2,2,10,2;
-  line-width:0.6;
+#state_line[ADM0_A3='USA'],
+#state_line[ADM0_A3='CAN'] {
+  [zoom>2] {
+    line-dasharray:2,2,10,2;
+    line-width:0.6;
+  }
 }
