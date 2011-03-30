@@ -45,17 +45,25 @@ Map { background-color:@base; }
   [zoom=4] { line-width:0.6; }
   [zoom=5] { line-width:0.8; }
   [zoom=6] { line-width:1; }
-  [zoom>6] { line-width:1.2; }
+  [zoom=7] { line-width:1.2; }
+  [zoom=8] { line-width:1.4; }
+  [zoom>8] { line-width:1.6; }
 }
 
 #subnational_boundaries[COUNTRYNAM='US'][zoom=4],
 #subnational_boundaries[COUNTRYNAM='Canada'][zoom=4],
 #subnational_boundaries[COUNTRYNAM='Australia'][zoom=4],
+#map-units[zoom>4],
 #subnational_boundaries[zoom>4] {
   line-color:#0AF;
   line-dasharray:4,2;
   line-opacity:0.2;
   line-width:0.4;
+  [zoom=5] { line-width:0.5; }
+  [zoom=6] { line-width:0.6; }
+  [zoom=7] { line-width:0.8; }
+  [zoom=8] { line-width:1.0; }
+  [zoom>8] { line-width:1.2; }
 }
 
 #geo-lines[DISPLAY!='International Date Line - Pre 1995 alignment'] {
@@ -68,12 +76,12 @@ Map { background-color:@base; }
 
 #urban {
   polygon-fill:#9F6;
-  polygon-opacity:0.75;
+  polygon-opacity:0.66;
+  line-color:#9F6;
+  line-opacity:0.33;
+  [zoom=3] { line-width:0.4; }
+  [zoom=4] { line-width:0.6; }
+  [zoom=5] { line-width:0.8; }
+  [zoom=6] { line-width:1; }
+  [zoom>6] { line-width:1.2; }
 }
-/* Waiting on mess issue #49
-#urban[zoom=3] { line-width:0.4; }
-#urban[zoom=4] { line-width:0.6; }
-#urban[zoom=5] { line-width:0.8; }
-#urban[zoom=6] { line-width:1; }
-#urban[zoom>6] { line-width:1.2; }
-*/
