@@ -1,7 +1,7 @@
 {
   "_center": {
-    "lat": 35.232159410834,
-    "lon": -86.848147290808,
+    "lat": 12.452668839199447,
+    "lon": -18.645022290808004,
     "zoom": 3
   },
   "_format": "png",
@@ -11,7 +11,7 @@
     "template_teaser": "<img src=\"data:image/png;base64,[flagpng]\" style=\"margin-top:5px;\" /><br />\n<strong>[ADMIN]</strong>",
     "template_full": ""
   },
-  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs",
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "style.mss",
     "labels.mss",
@@ -21,7 +21,7 @@
     {
       "id": "land-glow",
       "name": "land-glow",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "class": "",
       "Datasource": {
         "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/admin_0_countries.zip",
@@ -32,7 +32,7 @@
     {
       "id": "country",
       "name": "country",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "class": "",
       "Datasource": {
         "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/admin_0_countries.zip",
@@ -43,7 +43,7 @@
     {
       "id": "rivers",
       "name": "rivers",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "class": "",
       "geometry": "linestring",
       "Datasource": {
@@ -54,7 +54,7 @@
     {
       "id": "lakes",
       "name": "lakes",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "class": "",
       "Datasource": {
         "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/lakes.zip",
@@ -65,7 +65,7 @@
     {
       "id": "state",
       "name": "state",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "class": "",
       "Datasource": {
         "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/admin_1_states_provinces_lines_shp.zip",
@@ -76,7 +76,7 @@
     {
       "id": "admin-0-line-disputed",
       "name": "admin-0-line-disputed",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "class": "border disputed",
       "Datasource": {
         "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/admin_0_boundary_breakaway_disputed_areas.zip",
@@ -87,7 +87,7 @@
     {
       "id": "admin-0-line-land",
       "name": "admin-0-line-land",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "class": "border country",
       "Datasource": {
         "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/admin_0_boundary_lines_land.zip",
@@ -98,7 +98,7 @@
     {
       "id": "glacier",
       "name": "glacier",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "class": "",
       "Datasource": {
         "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/glaciated_areas.zip",
@@ -109,7 +109,7 @@
     {
       "id": "geo-lines",
       "name": "geo-lines",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "class": "",
       "Datasource": {
         "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/geographic_lines.zip",
@@ -131,7 +131,7 @@
     {
       "id": "cities",
       "name": "cities",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "class": "",
       "Datasource": {
         "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/populated_places_by_pop.zip",
@@ -142,7 +142,7 @@
     {
       "id": "paper",
       "name": "paper",
-      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "srs": "",
       "class": "",
       "Datasource": {
         "file": "http://tilemill-data.s3.amazonaws.com/world_extent_wgs84.geojson",
@@ -154,7 +154,7 @@
     {
       "id": "country-interaction",
       "name": "country-interaction",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "class": "",
       "Datasource": {
         "file": "/home/aj/GeoData/DS/countries_interaction_900913.geojson",
