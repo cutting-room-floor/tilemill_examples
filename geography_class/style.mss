@@ -3,33 +3,67 @@
 'Geography Class'
 =================
 
+Note that this map doing some rather complex things thus
+slowish rendering should not be surprising. A pre-rendered
+demo is online at <http://mapbox.com/tileset/geography-class>
+
+Hover Interaction & Embedded Data
+---------------------------------
+
+When you move your cursor around the map you should see the 
+name and flag of the country you are hovering over appear
+in the top left. You can pull any attributes from a data
+layer to form tooltips like this. Here, we are pulling a 
+text attribute and a base64-encoded PNG image from a GeoJSON
+file of country polygons. Click on the settings wrench at the
+top right, then on the 'Interaction' tab to see how this was 
+set up.
+
 Layers overview
 ---------------
 
-#paper [world-extent.zip]
-The shapefile is a square extending to the bounds of the 
+### country-interaction [countries_interaction.geojson]
+
+This is an invisible layer used to add hover interactivity
+to the map. It is derived fro the 1:50M resolution Natural
+Earth dataset. GeoJSON was chosen over shapefile in this
+instance to allow for the inclusion of base64-encoded PNG
+data (not possible in a DBF due to the limit of
+255 bytes per cell).
+
+### paper [world_extent_merc.geojson]
+
+The shapefile is a rectangle extending to the bounds of the 
 map filled with a repeating transparent pattern to give the 
 map a folded paper texture.
 
-#cities
+### cities [populated_places_by_pop.zip]
 
-#country-name [admin-0-point.zip]
-Labeled points of the world's country names.
+This is essentially Natural Earth's Populated Places 
+shapefile, but the elements have been reordered such by
+population (descending). This is to take advantage of the 
+fact that Mapnik will give priority to elements stored first
+in the datasource. Using various classification attributes 
+in the shapefile, only certain cities will be shown at 
+certain zoom levels.
 
-#cities [populated-places.zip]
-Point locations of many of the world's large cities. Using 
-various classification attributes in the shapefile, only 
-certain cities will be shown at certain zoom levels.
+### country-name [country-labels.zip]
 
-#geo-lines [geographic-lines.zip]
+Labeled points of the world's country names. Derived from 
+Natural Earth Data but hand-tweaked by MapBox.
+
+### geo-lines [geographic-lines.zip]
+
 Important lines such as the equator, Arctic and Antarctic 
 circles, and the international date line.
 
-#admin-0-line-land [admin-0-line-land.zip]
+### admin-0-line-land [admin-0-line-land.zip]
+
 These are international borders that occur over land or 
 lakes. International maritime borders are a separate layer.
 
-#lakes [lakes.zip]
+### lakes [lakes.zip]
+
 The world's lakes.
 
  
@@ -41,7 +75,12 @@ The world's lakes.
 
 /* Water bodies */
 Map { 
-  background-color: @water; 
+  background-color: @water;
+}
+
+/* Required to 'activate' the polygons for interactivity */
+#country-interaction { 
+  polygon-opacity:0;
 }
 
 #lakes[Name1!=''][zoom>2],
@@ -59,10 +98,10 @@ Map {
   line-width:2;
   line-opacity:0.8;
 }
-/*#lakes[zoom>5] {
+#lakes[zoom>5] {
   line-width:1.8;
   line-opacity:1;
-}*/
+}
 
 #rivers[ScaleRank=1][zoom>=3],
 #rivers[ScaleRank=2][zoom>=4],
@@ -141,16 +180,37 @@ Map {
   [zoom>3] { line-width:1; }
 }
 
-#admin-0-line-land[zoom>1] {
+.border.country[zoom>1],
+.border.disputed[zoom>2] {
   line-width:1;
   line-color:#fff;
   line-join:round;
+  .country[FeatureCla='Disputed (please verify)'] {
+    [zoom=3] { line-dasharray:4,1; }
+    [zoom=4] { line-dasharray:5,2; }
+    [zoom=5] { line-dasharray:6,2; }
+    [zoom=6] { line-dasharray:8,3; }
+    [zoom>6] { line-dasharray:10,3; }
+  }
+  .disputed[FeatureCla='Breakaway'] {
+    [zoom=3] { line-dasharray: 3,2; }
+    [zoom=4] { line-dasharray: 4,4; }
+    [zoom=5] { line-dasharray: 5,5; }
+    [zoom=6] { line-dasharray: 6,6; }
+    [zoom>6] { line-dasharray: 8,8; }
+  }
+  .disputed[FeatureCla='Claim boundary'] { 
+    line-dasharray: 1,3;
+    [zoom>6] { line-dasharray: 2,4; }
+  }
+  .country[FeatureCla='Indefinite (please verify)'] {
+    line-dasharray: 6,1;
+  }
 }
 
 #state[ADM0_A3="USA"],
 #state[ADM0_A3="CAN"],
-#state[ADM0_A3="AUS"],
-#state[ADM0_A3="RUS"] {
+#state[ADM0_A3="AUS"] {
   [zoom>3] {
     line-color:@line;
     line-opacity:0.25;
