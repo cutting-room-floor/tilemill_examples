@@ -7,7 +7,7 @@ Inspired by the impossible-to-fold maps in your glovebox.
 
 ***********************************************************************/
 
-@land: #FFF6E0;
+@land: #fff1cf;
 @water: #C0E0F8;
 @waterline: #8CE;
 
@@ -22,13 +22,20 @@ Map {
 #countries::fill {
   polygon-fill:@land;
   polygon-gamma:0.75;
-}
-#countries::fill[SOV_A3='USA'] {
-  polygon-fill:@land*1.1;
+  [ADM0_A3='USA'] { polygon-fill:lighten(@land, 5); }
 }
 
-#lake::outline { line-color:@waterline; }
-#lake::fill { polygon-fill:@water; }
+#lake[zoom>=0][ScaleRank<=2],
+#lake[zoom>=1][ScaleRank=3],
+#lake[zoom>=2][ScaleRank=4],
+#lake[zoom>=3][ScaleRank=5],
+#lake[zoom>=4][ScaleRank=6],
+#lake[zoom>=5][ScaleRank=7],
+#lake[zoom>=6][ScaleRank=8],
+#lake[zoom>=7][ScaleRank=9] {
+  ::outline { line-color:@waterline; }
+  ::fill { polygon-fill:@water; }
+}
 
 .park { line-color:#AD9; }
 .park.area { polygon-fill:#DEB; }
