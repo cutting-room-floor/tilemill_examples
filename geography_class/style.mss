@@ -64,8 +64,20 @@ lakes. International maritime borders are a separate layer.
 
 ### lakes [lakes.zip]
 
-The world's lakes.
+The world's lakes. The style is designed such that smaller 
+lakes only appear as you zoom in.
 
+### rivers [rivers_lake_centerlines_scale_ranks.zip]
+
+### country [admin_0_countries.zip]
+
+Countries - the rainbow.mss stylesheet colors each of these
+individually.
+
+### land-glow [admin_0_countries.zip]
+
+A copy of the country layer providing the shadow/glow around
+the continents.
  
 ***********************************************************************/
 
