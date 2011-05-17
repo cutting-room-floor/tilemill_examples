@@ -65,6 +65,32 @@
   }
 }
 
+.location[PLACE='town'][zoom>6][zoom<15] {
+  text-face-name:@font_reg;
+  text-name:"[NAME]";
+  text-fill:#444;
+  text-halo-fill:rgba(255,255,255,0.8);
+  text-halo-radius:2;
+  text-transform:uppercase;
+  text-size:9;
+  [zoom=11] {
+    text-size:10;
+    text-character-spacing:1;
+  }
+  [zoom=12] {
+    text-size:11;
+    text-character-spacing:2;
+  }
+  [zoom=13] {
+    text-size:12;
+    text-character-spacing:3;
+  }
+  [zoom=14] {
+    text-size:14;
+    text-character-spacing:4;
+  }
+}
+
 .location[PLACE='hamlet'][zoom>14][zoom<18],
 .location[PLACE='suburb'][zoom>14][zoom<18] {
   text-face-name:@font_reg;
