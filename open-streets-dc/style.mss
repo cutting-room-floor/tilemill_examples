@@ -1,7 +1,7 @@
 /**********************************************************
 
-'OpenStreetMap'
-===============
+Open Streets, DC
+================
 
 *An example of street-level map design.*
 
