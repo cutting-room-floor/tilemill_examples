@@ -5,6 +5,7 @@
 @primary: @trunk;
 @secondary: @trunk;
 @road: #bbb;
+@track: @road;
 @footway: #6B9;
 @cycleway: #69B;
 
@@ -99,10 +100,15 @@
 }
 
 .highway[TYPE='track'] {
-  .line[zoom>=
+  .line[zoom>=13] {
+    line-color:@track;
+    line-cap:round;
+    line-join:round;
+  }
 }
 
 .highway[TYPE='footway'],
+.highway[TYPE='path'],
 .highway[TYPE='pedestrian'] {
   .line[zoom>=14] {
     line-color:@footway;
@@ -221,6 +227,9 @@
   .line[TYPE='road'],
   .line[TYPE='tertiary'],
   .line[TYPE='unclassified']  { line-width: 1.0; }
+  .line[TYPE='service']       { line-width: 0.5; }
+  
+  .line[TYPE='track']         { line-width: 0.5; line-dasharray:2,3; }
 }
 
 .highway[zoom=14] {
@@ -251,8 +260,11 @@
   .fill[TYPE='unclassified']  { line-width: 1.6; }
   .line[TYPE='service']       { line-width: 0.6; }
   
+  .line[TYPE='track']         { line-width: 0.6; line-dasharray:2,3; }
+  
   .line[TYPE='cycleway'],
   .line[TYPE='footway'],
+  .line[TYPE='path'],
   .line[TYPE='pedestrian'] {
     line-dasharray:1,2;
     line-width:0.6;
@@ -287,8 +299,11 @@
   .fill[TYPE='unclassified']  { line-width: 4; }
   .line[TYPE='service']       { line-width: 1; }
   
+  .line[TYPE='track']         { line-width: 1; line-dasharray:2,3; }
+  
   .line[TYPE='cycleway'],
   .line[TYPE='footway'],
+  .line[TYPE='path'],
   .line[TYPE='pedestrian'] {
     line-dasharray:1,2;
     line-width:0.8;
@@ -325,8 +340,11 @@
   .fill[TYPE='trunk_link'],
   .fill[TYPE='primary_link'] { line-width: 4; }
   
+  .line[TYPE='track']         { line-width: 1.2; line-dasharray:2,3; }
+  
   .line[TYPE='cycleway'],
   .line[TYPE='footway'],
+  .line[TYPE='path'],
   .line[TYPE='pedestrian'] {
     line-dasharray:1,2;
     line-width:1.0;
@@ -364,8 +382,11 @@
   .fill[TYPE='trunk_link'],
   .fill[TYPE='primary_link'] { line-width: 8; }
   
+  .line[TYPE='track']         { line-width: 1.4; line-dasharray:2,3; }
+  
   .line[TYPE='cycleway'],
   .line[TYPE='footway'],
+  .line[TYPE='path'],
   .line[TYPE='pedestrian'] {
     line-dasharray:2,3;
     line-width:1.2;
