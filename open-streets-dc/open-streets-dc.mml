@@ -1,0 +1,83 @@
+{
+  "_center": {
+    "lat": 38.89667349864937,
+    "lon": -77.03228652477152,
+    "zoom": 14
+  },
+  "_format": "png",
+  "_interactivity": false,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "highway.mss",
+    "labels.mss"
+  ],
+  "Layer": [
+    {
+      "id": "dcgis-water",
+      "name": "dcgis-water",
+      "srs": "",
+      "class": "water",
+      "Datasource": {
+        "file": "http://tilemill-data.s3.amazonaws.com/dcgis/WaterPly_900913.zip",
+        "type": "shape"
+      },
+      "geometry": "polygon"
+    },
+    {
+      "id": "natural",
+      "name": "natural",
+      "srs": "",
+      "class": "natural",
+      "Datasource": {
+        "file": "http://tilemill-data.s3.amazonaws.com/osm/united_states_united_states_district_of_columbia_natural.zip",
+        "type": "shape"
+      },
+      "geometry": "polygon"
+    },
+    {
+      "id": "highway-outline",
+      "name": "highway-outline",
+      "srs": "",
+      "class": "highway line",
+      "Datasource": {
+        "file": "http://localhost:8889/api/Library/1305584430265/files/united_states_united_states_district_of_columbia_highway.zip",
+        "type": "shape"
+      },
+      "geometry": "linestring"
+    },
+    {
+      "id": "highway",
+      "name": "highway",
+      "srs": "",
+      "class": "highway fill",
+      "Datasource": {
+        "file": "http://tilemill-data.s3.amazonaws.com/osm/united_states_united_states_district_of_columbia_highway.zip",
+        "type": "shape"
+      },
+      "geometry": "linestring"
+    },
+    {
+      "id": "location",
+      "name": "location",
+      "srs": "",
+      "class": "location",
+      "Datasource": {
+        "file": "http://tilemill-data.s3.amazonaws.com/osm/united_states_united_states_district_of_columbia_location.zip",
+        "type": "shape"
+      },
+      "geometry": "point"
+    },
+    {
+      "id": "highway-label",
+      "name": "highway-label",
+      "srs": "",
+      "class": "highway-label",
+      "Datasource": {
+        "file": "http://tilemill-data.s3.amazonaws.com/osm/united_states_united_states_district_of_columbia_highway.zip",
+        "type": "shape"
+      },
+      "geometry": "linestring"
+    }
+  ]
+}
