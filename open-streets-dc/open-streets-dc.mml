@@ -1,7 +1,7 @@
 {
   "_center": {
-    "lat": 38.89667349864937,
-    "lon": -77.03228652477152,
+    "lat": 38.892289595340415,
+    "lon": -77.03649222850682,
     "zoom": 14
   },
   "_format": "png",
@@ -41,7 +41,7 @@
       "srs": "",
       "class": "highway line",
       "Datasource": {
-        "file": "http://localhost:8889/api/Library/1305584430265/files/united_states_united_states_district_of_columbia_highway.zip",
+        "file": "http://tilemill-data.s3.amazonaws.com/osm/united_states_united_states_district_of_columbia_highway.zip",
         "type": "shape"
       },
       "geometry": "linestring"
