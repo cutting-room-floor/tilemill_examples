@@ -24,7 +24,8 @@ download it and run the following commands:
 
 ***********************************************************/
 
-/* PALETTE */
+/* ---- PALETTE ---- */
+
 @water:#c0d8ff;
 @forest:#cea;
 @land:#fff;
@@ -45,7 +46,7 @@ Map {
 /* These are not used, but if customizing this style you may
 wish to use OSM's land shapefiles. See the wiki for info:
 <http://wiki.openstreetmap.org/wiki/Mapnik#World_boundaries> */
-#shoreline_300[zoom<7],
-#processed_p[zoom>=7] {
+#shoreline_300[zoom<11],
+#processed_p[zoom>=11] {
   polygon-fill: @land;
 }

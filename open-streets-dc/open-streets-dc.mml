@@ -79,5 +79,6 @@
       },
       "geometry": "linestring"
     }
-  ]
+  ],
+  "_legend": "<!-- This legend uses Unicode box-drawing characters to approxmate line styles. -->\n<span style='color:#DD3A85'>\u2501</span> Motorways <br />\n<span style='color:#FFC81A'>\u2501</span> Main roads <br />\n<span style='color:#fff'>\u2501</span> Other roads <br />\n<span style='color:#69B'>\u2509</span> Bike paths <br />\n<span style='color:#6B9'>\u2509</span> Foot paths <br />\n<span style='color:#cea'>\u2589</span> Forest <br />\n<span style='color:#c0d8ff'>\u2589</span> Water "
 }
