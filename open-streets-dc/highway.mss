@@ -389,7 +389,7 @@
   }
 }
 
-.highway[zoom=17] {
+.highway[zoom>=17] {
   .line[TYPE='motorway']      { line-width: 13 + 3; }
   .fill[TYPE='motorway']      { line-width: 13; }
   .line[TYPE='trunk']         { line-width: 10 + 2.5; }
